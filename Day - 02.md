@@ -10,7 +10,9 @@
 the value of that field. In other words, the carrier mobility is a constant.
   - However, at high electric field strengths, the carriers fail to follow this linear model.
   - When the electrical field along the channel reaches a critical value $E_c$, the velocity of the carriers tends to saturate due to scattering effects (collisions suffered by the carriers).
- 
+
+![WhatsApp Image 2025-10-25 at 3 28 02 PM](https://github.com/user-attachments/assets/3ac61bb4-20b0-4ae4-af24-b73024ccbf0c)
+
 ## 2 Drain Current in Resistive/ Linear Region
 **Now the drain current equation in the resistive region can be re-evaluated using:**  
 <br>
@@ -72,6 +74,12 @@ This can be further simplified to the below:
 $~~~~~~~~ \boxed{V_{DSAT} = \kappa(V_{GT}) ~ V_{GT}} ~~~~ , where ~ V_{GT} = (V_{GS} - V_{TH})$  
 
 <br>
+
+<img width="2968" height="1725" alt="Screenshot 2025-10-18 123008" src="https://github.com/user-attachments/assets/c0096c6e-c012-481e-8e5b-36e4137d622e" />
+
+<img width="3839" height="1865" alt="Screenshot 2025-10-18 135910" src="https://github.com/user-attachments/assets/aba00b7a-6be4-40f7-80d3-0db069276daa" />
+
+<img width="3839" height="1917" alt="Screenshot 2025-10-18 122239" src="https://github.com/user-attachments/assets/e24fa5a6-160f-42bc-80d5-b443257df11c" />
 
 LAB Velocity Saturation - ID vs VDS
 LAB Velocity Saturation - sky130
