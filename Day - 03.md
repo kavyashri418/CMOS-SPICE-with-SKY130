@@ -1,6 +1,19 @@
 # CMOS Switching Threshold and Dynamic Simulations
 
 ## 1 Voltage transfer characteristics - SPICE Simulation 
+## 1.1 SPICE deck creation for CMOS inverter
+VTC - SPICE simulations
+- Component connectivity
+- Component values
+- Identify nodes
+- Name nodes
+  
+<img width="3544" height="1168" alt="Screenshot 2025-10-18 113003" src="https://github.com/user-attachments/assets/9008c926-5ea9-4daa-a993-67897c987d46" />
+
+## 1.2 SPICE simulation
+
+<img width="1585" height="690" alt="Screenshot 2025-10-18 114028" src="https://github.com/user-attachments/assets/5649275b-afb2-418f-9218-670d842ce3fb" />
+
 ## 2 Static Behaviour Robustness:
 1) Switching Threshold, VM
   - The switching threshold, $V_M$, is defined as the point where $V_{in} = V_{out}$.
@@ -11,8 +24,7 @@
     1) Devices are Velocity Saturated
     2) Velocity Saturation does not occur
 
-_**Note:**_ For the following derivations, we ignore the effects of Channel Length Modulation for simplicity.  
-
+<img width="924" height="520" alt="CircuitDesignWorkshop_D3_CMOS_Inverter_Robustness_SwitchingThreshold_1" src="https://github.com/user-attachments/assets/ed51f23a-f268-428b-8cb1-81fc0acd15b5" />
 
 **<ins>Case 1:</ins> Devices are Velocity-Saturated - $V_{DSAT}<(V_M-V_{TH})$**  
   - This case is applicable to short-channel devices or when the supply voltage is high so that the devices are in velocity saturation.
@@ -59,6 +71,8 @@ $~~~~~~~~ \boxed{V_M = \dfrac{V_{THn} + r(V_{DD} + V_{THp})}{1+r}}, ~~~~ where ~
 
   - The switching threshold, $V_M$ **is relatively insensitive to variations in the device ratio**.
     - Small variations of the ratio (e.g., 3 or 2.5) do not disturb the transfer characteristic that much.
+   
+<img width="926" height="523" alt="CircuitDesignWorkshop_D3_CMOS_Inverter_Robustness_SwitchingThreshold_4" src="https://github.com/user-attachments/assets/413e8707-da89-450a-941b-6ca847ee38cc" />
 
 
 
