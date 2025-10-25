@@ -2,10 +2,16 @@
 
 ## 1 Introduction to Circuit Design and SPICE Simulations
 
-Why do we need SPICE simulation?
+### Why do we need SPICE simulation?
+
 SPICE (Simulation Program with Integrated Circuit Emphasis) is essential for analyzing and verifying electronic circuits before fabrication. It allows designers to simulate circuit behavior accurately, predicting voltages, currents, and timing under different conditions without building physical prototypes. By modeling real device characteristics such as MOSFETs, BJTs, and diodes, SPICE helps identify design issues like wrong biasing, signal distortion, or instability early in the design phase. It supports DC, AC, transient, and noise analyses, making it invaluable for both analog and mixed-signal circuit design. Overall, SPICE simulation saves time, reduces cost, and ensures reliable, optimized circuit performance.
 
+![WhatsApp Image 2025-10-25 at 1 35 17 PM](https://github.com/user-attachments/assets/413a6398-2bbe-4462-8bf5-b71fa3ff3cfb)
+![WhatsApp Image 2025-10-25 at 1 35 37 PM](https://github.com/user-attachments/assets/09b73170-6a43-45f8-9eaf-df98f1c84618)
+
 ### 1.1 Introduction to Basic Element in Circuit Design - NMOS
+
+![WhatsApp Image 2025-10-25 at 1 17 17 PM](https://github.com/user-attachments/assets/54a93760-ab50-414c-9da5-5dcda59cacfb)
 
 - 4 terminal device
 - Consists of p-substrate
@@ -20,6 +26,8 @@ SPICE (Simulation Program with Integrated Circuit Emphasis) is essential for ana
 
 ### 1.2 Strong Inversion and Threshold Voltage
 
+![WhatsApp Image 2025-10-25 at 1 19 31 PM](https://github.com/user-attachments/assets/474515e3-69f3-44a6-877f-22fd72a10a4b)
+
 Vgs=0
 - Drain, Source, Bulk, connected to Gnd
 - Substrate source and substrate drain from p-n junction diode
@@ -31,30 +39,41 @@ Vgs=0
 - The 'Vgs' voltage at which strong inversion occurs is called threshold Vgs (Vt)
 - Further increase 'Vgs'
 - No change in depeletion layer width
-
-
 - Electrons from heavily doped 'n+' source regions are drawn in region under gate 'G'
 - Continuous n-channel formation from S-D whose conductivity is modulated by 'Vgs'
 
 ### 1.3 Threshold Voltage with Positive Substrate Potential
 
+<img width="3720" height="1811" alt="Screenshot 2025-10-18 085353" src="https://github.com/user-attachments/assets/ebc99659-91a9-4c23-bb32-4581ccef9b7f" />
+
 Additional reverse bias between source 's' and substrate 'b'. Therefore, depletion layer width is slightly high near 's', increase 'Vgs'
 Threshold volatage equation 
 
 Vto = Threshold voltage at Vsb = 0, and is a function of manufacturing process.
+
 γ = body effect coefficient, express the impact of changes in body bias Vsb.
+
 ϕF = fermi potential
-γ = 
-=relative permittivity of silicon=11.7
-Na= doping concentration
-q= charge of the electron
-Cox= oxide capacitance
+
+γ = √(2qN<sub>A</sub>ε<sub>si</sub>) / C<sub>ox</sub>
+
+ε<sub>si</sub> = relative permittivity of silicon=11.7
+
+N<sub>A = doping concentration
+
+q = charge of the electron
+
+Cox = oxide capacitance
+
+ϕ<sub>F</sub> = −ϕ<sub>T</sub> × ln(N<sub>A</sub> / n<sub>i</sub>)
 
 ni = intrinsic doping parameter for the substrate
  
 ## 2 NMOS Resistive Region and Saturation Region of Operation
 
 ### 2.1 Resistive region of operation with small drain-source voltage
+
+<img width="2146" height="1471" alt="Screenshot 2025-10-18 091123" src="https://github.com/user-attachments/assets/78808a06-6ac5-46ec-adb5-35701341c52e" />
 
 Resistive Operation
 - The 'Vgs' voltage at which strong inversion occurs is called threshold Vg (Vt)
@@ -80,11 +99,14 @@ $~~~~~~~~ C_{ox} = \dfrac{\epsilon_{ox}}{t_{ox}}$
       3.5 x 10e⁻¹¹ F/m
       
 tox = oxide thickness
+
 From devie point of view, we have two kinds of currents
 1) Drift current - current due to potential difference
 2) Diffusion current - current due to difference in carrier concentration
 
 ### 2.3 Drain current model for linear region of operation
+
+<img width="3684" height="2159" alt="Screenshot 2025-10-18 095828" src="https://github.com/user-attachments/assets/2cfea25e-6b11-46c4-bbaa-664c6fecb7fc" />
 
 Id = velocity of charge carriers over channel width x available charge
 Id = -Vn(x).Qi(x).W
@@ -123,7 +145,9 @@ _Hence the name Linear Region_
 
 ### 2.4 Pinch-Off region condition
 
- - When a $V_{DS}$ voltage is applied, the channel voltage becomes a function of both $V_{GS}$ and $V_{DS}$.
+<img width="1851" height="1292" alt="Screenshot 2025-10-18 103208" src="https://github.com/user-attachments/assets/2eb1dce4-f895-489e-a8ae-4c18d9551496" />
+
+  - When a $V_{DS}$ voltage is applied, the channel voltage becomes a function of both $V_{GS}$ and $V_{DS}$.
   - Since the induced channel depth depends on the channel voltage relative to the Gate terminal, and specifically on the amount by which this voltage exceeds the threshold voltage, $V_{TH}$, we find that the channel is no longer of uniform depth; rather, the channel will take a tapered shape:
     - being deepest at the Source end, where the depth is proportional to $[V_{GS}-V_{TH}]$, and
     - shallowest at the drain end, where the depth is proportional to $[V_{GS}-V_{TH}-V_{DS}]$.
@@ -133,6 +157,8 @@ _Hence the name Linear Region_
   - At this point, the induced charge is zero, and the conducting channel disappears or is pinched off starting from the Drain end.
 
 ### 2.5 Drain current model for saturation region of operation
+
+<img width="3609" height="1962" alt="Screenshot 2025-10-18 104742" src="https://github.com/user-attachments/assets/8d8f265a-d0ba-4788-b801-82cbb51b07c7" />
 
  - Increasing $V_{DS}$ beyond the $V_{DSsat}$ value of ($V_{GS}-V_{TH}$) has no effect on the channel shape and charge.
   - Thus, the current through the channel remains constant at the value reached for $V_{DS}= V_{GS}-V_{TH}$.
