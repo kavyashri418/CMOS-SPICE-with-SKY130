@@ -2,14 +2,14 @@
 
 ## 1 Introduction to Circuit Design and SPICE Simulations
 
-### Why do we need SPICE simulation?
+## Why do we need SPICE simulation?
 
 SPICE (Simulation Program with Integrated Circuit Emphasis) is essential for analyzing and verifying electronic circuits before fabrication. It allows designers to simulate circuit behavior accurately, predicting voltages, currents, and timing under different conditions without building physical prototypes. By modeling real device characteristics such as MOSFETs, BJTs, and diodes, SPICE helps identify design issues like wrong biasing, signal distortion, or instability early in the design phase. It supports DC, AC, transient, and noise analyses, making it invaluable for both analog and mixed-signal circuit design. Overall, SPICE simulation saves time, reduces cost, and ensures reliable, optimized circuit performance.
 
 ![WhatsApp Image 2025-10-25 at 1 35 17 PM](https://github.com/user-attachments/assets/413a6398-2bbe-4462-8bf5-b71fa3ff3cfb)
 ![WhatsApp Image 2025-10-25 at 1 35 37 PM](https://github.com/user-attachments/assets/09b73170-6a43-45f8-9eaf-df98f1c84618)
 
-### 1.1 Introduction to Basic Element in Circuit Design - NMOS
+## 1.1 Introduction to Basic Element in Circuit Design - NMOS
 
 ![WhatsApp Image 2025-10-25 at 1 17 17 PM](https://github.com/user-attachments/assets/54a93760-ab50-414c-9da5-5dcda59cacfb)
 
@@ -24,7 +24,7 @@ SPICE (Simulation Program with Integrated Circuit Emphasis) is essential for ana
 - D=Drain
 - B=Body
 
-### 1.2 Strong Inversion and Threshold Voltage
+## 1.2 Strong Inversion and Threshold Voltage
 
 ![WhatsApp Image 2025-10-25 at 1 19 31 PM](https://github.com/user-attachments/assets/474515e3-69f3-44a6-877f-22fd72a10a4b)
 
@@ -42,7 +42,7 @@ Vgs=0
 - Electrons from heavily doped 'n+' source regions are drawn in region under gate 'G'
 - Continuous n-channel formation from S-D whose conductivity is modulated by 'Vgs'
 
-### 1.3 Threshold Voltage with Positive Substrate Potential
+## 1.3 Threshold Voltage with Positive Substrate Potential
 
 <img width="3720" height="1811" alt="Screenshot 2025-10-18 085353" src="https://github.com/user-attachments/assets/ebc99659-91a9-4c23-bb32-4581ccef9b7f" />
 
@@ -71,7 +71,7 @@ ni = intrinsic doping parameter for the substrate
  
 ## 2 NMOS Resistive Region and Saturation Region of Operation
 
-### 2.1 Resistive region of operation with small drain-source voltage
+## 2.1 Resistive region of operation with small drain-source voltage
 
 <img width="2146" height="1471" alt="Screenshot 2025-10-18 091123" src="https://github.com/user-attachments/assets/78808a06-6ac5-46ec-adb5-35701341c52e" />
 
@@ -85,7 +85,7 @@ Resistive Operation
 Qi(x) ∝ -([Vgs-V(x)]-Vt)
 ie Qi(x) = -Cox([Vgs-V(x)]-Vt)
 
-### 2.2 Drift Current
+## 2.2 Drift Current
 
 Qi(x) = -Cox([Vgs-V(x)]-Vt)
 
@@ -104,7 +104,7 @@ From devie point of view, we have two kinds of currents
 1) Drift current - current due to potential difference
 2) Diffusion current - current due to difference in carrier concentration
 
-### 2.3 Drain current model for linear region of operation
+## 2.3 Drain current model for linear region of operation
 
 <img width="3684" height="2159" alt="Screenshot 2025-10-18 095828" src="https://github.com/user-attachments/assets/2cfea25e-6b11-46c4-bbaa-664c6fecb7fc" />
 
@@ -143,7 +143,7 @@ But at low values, the $\dfrac{V_{DS}^2}{2}$ term can be ignored as it is close 
 $\boxed {i.e., I_D = k_n * (V_{GS} - V_{TH}) * V_{DS}} ~~~~ $
 _Hence the name Linear Region_
 
-### 2.4 Pinch-Off region condition
+## 2.4 Pinch-Off region condition
 
 <img width="1851" height="1292" alt="Screenshot 2025-10-18 103208" src="https://github.com/user-attachments/assets/2eb1dce4-f895-489e-a8ae-4c18d9551496" />
 
@@ -156,7 +156,7 @@ _Hence the name Linear Region_
     - i.e., $V_{DS}= V_{GS}-V_{TH} ~~~~~~~~ (=V_{OV})$, Gate Over-drive voltage
   - At this point, the induced charge is zero, and the conducting channel disappears or is pinched off starting from the Drain end.
 
-### 2.5 Drain current model for saturation region of operation
+## 2.5 Drain current model for saturation region of operation
 
 <img width="3609" height="1962" alt="Screenshot 2025-10-18 104742" src="https://github.com/user-attachments/assets/8d8f265a-d0ba-4788-b801-82cbb51b07c7" />
 
@@ -175,7 +175,7 @@ _Hence the name Linear Region_
     - Any increase in $V_{DS}$ above $V_{DSsat}$ appears as a voltage drop across the depletion region
     - Thus, both the current through the channel, $I_{Dsat}$ and the voltage drop across the channel $i.e., V_{DSsat} = (V_{GS}-V_{TH})$ **remain constant in saturation**.
 
-### 2.6 Channel Length Modulation and Finite Output Resistance in Saturation
+## 2.6 Channel Length Modulation and Finite Output Resistance in Saturation
 
  - The above Drain current equation seems to indicate that in sarutation, $I_D$ is independent of $V_{DS}$
   - Thus a change, $\Delta V_{DS}$, in the Drain-to-Source voltage causes a zero change in $I_D$, which implies that the incremental resistance looking into the drain of a saturated MOSFET is infinite.
